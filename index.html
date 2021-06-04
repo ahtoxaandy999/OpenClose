@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClose</title>
+    <script src="openClose.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="target-selector">
+            <button class="opener-selector">Click Me!</button>
+            <div class="drop">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nesciunt ipsam. Laboriosam facere in, harum, voluptate recusandae perferendis dicta corrupti quod commodi quasi eaque eligendi. Vero quas debitis delectus ipsam.
+            </div>
+        </div>
+        <div class="target-selector">
+            <button class="opener-selector">Click Me!</button>
+            <div class="drop">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nesciunt ipsam. Laboriosam facere in, harum, voluptate recusandae perferendis dicta corrupti quod commodi quasi eaque eligendi. Vero quas debitis delectus ipsam.
+                <div class="target-selector">
+                    <button class="opener-selector">Click Me!</button>
+                    <div class="drop">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nesciunt ipsam. Laboriosam facere in, harum, voluptate recusandae perferendis dicta corrupti quod commodi quasi eaque eligendi. Vero quas debitis delectus ipsam.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .container {
+        padding-top: 10vh;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .target-selector {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 300px;
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+    .drop {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .target-selector.active-class > .drop {
+        max-height: 400px;
+    }
+</style>
+</html>
